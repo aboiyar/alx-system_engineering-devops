@@ -1,2 +1,2 @@
 #!/bin/bash
-(ls -la ; (cd ..; ls -la); (cd /boot; ls -la))
+find . -maxdepth 1 -exec ls -la {} \; -execdir cd .. \; -maxdepth 0 -exec ls -la /boot \;
